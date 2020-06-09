@@ -1,0 +1,9 @@
+<script>
+  let actualYear = new Date().getFullYear();
+</script>
+
+<div class="Footer">
+  <div class="Footer-container">
+    <small class="Footer-copy">© {actualYear} PUGSTAGRAM</small>
+  </div>
+</div>
