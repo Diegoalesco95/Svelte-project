@@ -90,7 +90,7 @@
     <div class="Stories-items">
       <div class="Stories-item">
         <div class="Stories-item-box">
-          <img src="https://randomuser.me/api/portraits/women/43.jp g" alt="" />
+          <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="" />
         </div>
         <h2>
           Lizzie_Toy38

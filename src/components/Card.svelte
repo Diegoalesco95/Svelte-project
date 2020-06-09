@@ -1,5 +1,12 @@
 <script>
   import Comments from "./Comments.svelte";
+
+  export let username;
+  export let location;
+  export let photo;
+  export let postComment;
+  export let comments;
+  export let avatar;
 </script>
 
 <style>
@@ -121,10 +128,10 @@
       <div class="Card-user">
         <img
           src="https://images.dog.ceo/breeds/pug/n02110958_11732.jpg"
-          alt="" />
+          alt={username} />
         <h2>
-          Evangeline.pug
-          <span>North Brian, Bedfordshire</span>
+          {username}
+          <span>{location}</span>
         </h2>
       </div>
       <div class="Card-settings">
@@ -133,9 +140,7 @@
     </div>
     <div class="Card-photo">
       <figure>
-        <img
-          src="https://images.dog.ceo/breeds/pug/n02110958_11732.jpg"
-          alt="" />
+        <img src={photo} alt={username} />
       </figure>
     </div>
     <div class="Card-icons">
@@ -148,9 +153,9 @@
       </div>
     </div>
     <div class="Card-description">
-      <h3>Evangeline.pug</h3>
-      <span>Hola!</span>
+      <h3>{username}</h3>
+      <span>{postComment}</span>
     </div>
-    <Comments />
+    <Comments {comments} />
   </div>
 </div>
