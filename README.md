@@ -7,7 +7,7 @@
 - Desarrollar una aplicación con Svelte
 - Desplegar una webapp a producción
 
-En este curso realizaremos una aplicación muy parecida a Instagram, llamada _Pugstagram_. 
+En este curso realizaremos una aplicación muy parecida a Instagram, llamada _Pugstagram_.
 
 Utilizaremos como empaquetador y transpilador:
 
@@ -20,11 +20,9 @@ Deploy con:
 
 ## Vista de Home
 
-
-
 ![Home Preview](.readme-static/Home.png)
 
-## [Ver la aplicación]([https://pugstagram-diegoalesco95.netlify.app])
+## [Ver la aplicación](https://pugstagram-diegoalesco95.netlify.app/)
 
 ## ¿Cómo funciona?
 

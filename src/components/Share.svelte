@@ -1,5 +1,5 @@
 <script>
-  let URL = "https://pugstagram.co/";
+  let URL = "https://pugstagram-diegoalesco95.netlify.app/";
 </script>
 
 <style>
