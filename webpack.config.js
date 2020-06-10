@@ -24,20 +24,20 @@ module.exports = {
             options: {
               dev,
               hydratable: true,
-              hotReload: false
-            }
-          }
-        }
-      ]
+              hotReload: false,
+            },
+          },
+        },
+      ],
     },
     mode,
     plugins: [
       new webpack.DefinePlugin({
         'process.browser': true,
-        'process.env.NODE_ENV': JSON.stringify(mode)
+        'process.env.NODE_ENV': JSON.stringify(mode),
       }),
     ].filter(Boolean),
-    devtool: dev && 'inline-source-map'
+    devtool: dev && 'inline-source-map',
   },
 
   server: {
@@ -55,15 +55,20 @@ module.exports = {
             options: {
               dev,
               css: false,
-              generate: 'ssr'
-            }
-          }
-        }
-      ]
+              generate: 'ssr',
+            },
+          },
+        },
+      ],
     },
     mode: process.env.NODE_ENV,
     performance: {
-      hints: false
-    }
+      hints: false,
+    },
+  },
+  serviceworker: {
+    entry: config.serviceworker.entry(),
+    output: config.serviceworker.output(),
+    mode: process.env.NODE_ENV,
   },
 };
