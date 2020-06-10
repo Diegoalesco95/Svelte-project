@@ -7,7 +7,7 @@
     "dev": "sapper dev",
     "build": "sapper build",
     "export": "sapper export",
-    "start": "node __sapper__/build"
+    "start": "node __sapper__/export"
   },
   "keywords": [
     "svelte"
