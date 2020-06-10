@@ -11,7 +11,7 @@
 
 <script>
   import Main from "../components/Main.svelte";
-  import Sidebar from "../components/Sidebar.svelte";
+  import SideBar from "../components/SideBar.svelte";
   import TimeLine from "../components/TimeLine.svelte";
   export let data;
 </script>
@@ -22,5 +22,5 @@
 
 <Main>
   <TimeLine posts={data.posts} />
-  <Sidebar {...data.user} />
+  <SideBar {...data.user} />
 </Main>
