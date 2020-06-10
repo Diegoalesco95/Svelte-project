@@ -7,14 +7,14 @@ const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 
 const alias = { svelte: path.resolve('node_modules', 'svelte') };
-const extension = ['.mjs', '.js', '.json', '.svelte', '.html'];
+const extensions = ['.mjs', '.js', '.json', '.svelte', '.html'];
 const mainFields = ['svelte', 'module', 'browser', 'main'];
 
 module.exports = {
   client: {
     entry: config.client.entry(),
     output: config.client.output(),
-    resolve: { alias, extension, mainFields },
+    resolve: { alias, extensions, mainFields },
     module: {
       rules: [
         {
@@ -24,27 +24,28 @@ module.exports = {
             options: {
               dev,
               hydratable: true,
-              hotReload: false,
-            },
-          },
-        },
-      ],
+              hotReload: false
+            }
+          }
+        }
+      ]
     },
     mode,
     plugins: [
       new webpack.DefinePlugin({
         'process.browser': true,
-        'process.env.NODE_ENV': JSON.stringify(mode),
+        'process.env.NODE_ENV': JSON.stringify(mode)
       }),
     ].filter(Boolean),
-    devtool: dev && 'inline-source-map',
+    devtool: dev && 'inline-source-map'
   },
+
   server: {
     entry: config.server.entry(),
     output: config.server.output(),
     target: 'node',
     resolve: { alias, extensions, mainFields },
-    externals: Object.keys(pkd.dependencies).concat('encoding'),
+    externals: Object.keys(pkg.dependencies).concat('encoding'),
     module: {
       rules: [
         {
@@ -54,15 +55,15 @@ module.exports = {
             options: {
               dev,
               css: false,
-              generate: 'ssr',
-            },
-          },
-        },
-      ],
+              generate: 'ssr'
+            }
+          }
+        }
+      ]
     },
     mode: process.env.NODE_ENV,
     performance: {
-      hints: false,
-    },
+      hints: false
+    }
   },
 };
